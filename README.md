@@ -1,4 +1,4 @@
-# Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons
+# Robometer: Scaling General-Purpose Robotic Reward Models via  Trajectory Comparisons
 
 [![arXiv](https://img.shields.io/badge/arXiv-2603.02115-b31b1b.svg)](https://arxiv.org/abs/2603.02115)
 [![GitHub](https://img.shields.io/badge/GitHub-robometer-181717?logo=github)](https://github.com/robometer/robometer)
