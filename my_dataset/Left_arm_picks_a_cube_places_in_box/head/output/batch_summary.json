@@ -1,0 +1,597 @@
+[
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000000.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000000_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000000_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000000_rewards_progress_success.png",
+    "reward_min": 0.17782141268253326,
+    "reward_max": 0.8779116868972778,
+    "reward_mean": 0.4974437355995178
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000001.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000001_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000001_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000001_rewards_progress_success.png",
+    "reward_min": 0.18403157591819763,
+    "reward_max": 0.7593702077865601,
+    "reward_mean": 0.42400023341178894
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000002.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000002_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000002_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000002_rewards_progress_success.png",
+    "reward_min": 0.14057329297065735,
+    "reward_max": 0.7261394262313843,
+    "reward_mean": 0.3626127541065216
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000003.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000003_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000003_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000003_rewards_progress_success.png",
+    "reward_min": 0.15559160709381104,
+    "reward_max": 0.6211390495300293,
+    "reward_mean": 0.419477641582489
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000004.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000004_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000004_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000004_rewards_progress_success.png",
+    "reward_min": 0.19214600324630737,
+    "reward_max": 0.517824649810791,
+    "reward_mean": 0.35231611132621765
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000005.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000005_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000005_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000005_rewards_progress_success.png",
+    "reward_min": 0.1500312238931656,
+    "reward_max": 0.7491180300712585,
+    "reward_mean": 0.44460490345954895
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000006.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000006_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000006_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000006_rewards_progress_success.png",
+    "reward_min": 0.1394048035144806,
+    "reward_max": 0.7270252704620361,
+    "reward_mean": 0.4252736568450928
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000007.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000007_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000007_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000007_rewards_progress_success.png",
+    "reward_min": 0.15675276517868042,
+    "reward_max": 0.7905703783035278,
+    "reward_mean": 0.5125262141227722
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000008.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000008_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000008_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000008_rewards_progress_success.png",
+    "reward_min": 0.15815120935440063,
+    "reward_max": 0.5974358320236206,
+    "reward_mean": 0.3694477081298828
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000009.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000009_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000009_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000009_rewards_progress_success.png",
+    "reward_min": 0.10861783474683762,
+    "reward_max": 0.7047234773635864,
+    "reward_mean": 0.41242071986198425
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000010.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000010_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000010_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000010_rewards_progress_success.png",
+    "reward_min": 0.11802270263433456,
+    "reward_max": 0.7392506003379822,
+    "reward_mean": 0.4376777112483978
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000011.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 8,
+    "frames_shape": [
+      8,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000011_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000011_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000011_rewards_progress_success.png",
+    "reward_min": 0.12963853776454926,
+    "reward_max": 0.7251977920532227,
+    "reward_mean": 0.4517713785171509
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000012.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000012_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000012_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000012_rewards_progress_success.png",
+    "reward_min": 0.1293790489435196,
+    "reward_max": 0.576934278011322,
+    "reward_mean": 0.33258986473083496
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000013.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000013_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000013_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000013_rewards_progress_success.png",
+    "reward_min": 0.14502552151679993,
+    "reward_max": 0.7829915881156921,
+    "reward_mean": 0.45621559023857117
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000014.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000014_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000014_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000014_rewards_progress_success.png",
+    "reward_min": 0.14961682260036469,
+    "reward_max": 0.328962504863739,
+    "reward_mean": 0.24504633247852325
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000015.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000015_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000015_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000015_rewards_progress_success.png",
+    "reward_min": 0.16176603734493256,
+    "reward_max": 0.4797380566596985,
+    "reward_mean": 0.3261711299419403
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000016.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000016_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000016_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000016_rewards_progress_success.png",
+    "reward_min": 0.11019575595855713,
+    "reward_max": 0.47933247685432434,
+    "reward_mean": 0.30481740832328796
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000017.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000017_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000017_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000017_rewards_progress_success.png",
+    "reward_min": 0.13666389882564545,
+    "reward_max": 0.7339675426483154,
+    "reward_mean": 0.47781652212142944
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000018.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000018_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000018_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000018_rewards_progress_success.png",
+    "reward_min": 0.11266154050827026,
+    "reward_max": 0.40145978331565857,
+    "reward_mean": 0.26610466837882996
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000019.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000019_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000019_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000019_rewards_progress_success.png",
+    "reward_min": 0.15572300553321838,
+    "reward_max": 0.5276528596878052,
+    "reward_mean": 0.3245088756084442
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000020.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000020_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000020_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000020_rewards_progress_success.png",
+    "reward_min": 0.13587120175361633,
+    "reward_max": 0.7036805152893066,
+    "reward_mean": 0.4604017734527588
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000021.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000021_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000021_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000021_rewards_progress_success.png",
+    "reward_min": 0.1174156665802002,
+    "reward_max": 0.5193408727645874,
+    "reward_mean": 0.3214343786239624
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000022.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000022_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000022_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000022_rewards_progress_success.png",
+    "reward_min": 0.11389292031526566,
+    "reward_max": 0.6923936605453491,
+    "reward_mean": 0.40702319145202637
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000023.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000023_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000023_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000023_rewards_progress_success.png",
+    "reward_min": 0.10152358561754227,
+    "reward_max": 0.5056810975074768,
+    "reward_mean": 0.3218187987804413
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000024.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000024_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000024_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000024_rewards_progress_success.png",
+    "reward_min": 0.1352577656507492,
+    "reward_max": 0.5503369569778442,
+    "reward_mean": 0.40001702308654785
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000025.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000025_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000025_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000025_rewards_progress_success.png",
+    "reward_min": 0.11787888407707214,
+    "reward_max": 0.5944797396659851,
+    "reward_mean": 0.3395395278930664
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000026.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000026_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000026_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000026_rewards_progress_success.png",
+    "reward_min": 0.10742358863353729,
+    "reward_max": 0.3758064806461334,
+    "reward_mean": 0.25648367404937744
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000027.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000027_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000027_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000027_rewards_progress_success.png",
+    "reward_min": 0.1788557767868042,
+    "reward_max": 0.6928017735481262,
+    "reward_mean": 0.46227434277534485
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000028.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000028_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000028_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000028_rewards_progress_success.png",
+    "reward_min": 0.19432573020458221,
+    "reward_max": 0.6309029459953308,
+    "reward_mean": 0.4492027461528778
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000029.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000029_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000029_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000029_rewards_progress_success.png",
+    "reward_min": 0.17728804051876068,
+    "reward_max": 0.6284246444702148,
+    "reward_mean": 0.41260698437690735
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000030.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000030_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000030_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000030_rewards_progress_success.png",
+    "reward_min": 0.10553079843521118,
+    "reward_max": 0.8038684725761414,
+    "reward_mean": 0.4983902871608734
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000031.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000031_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000031_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000031_rewards_progress_success.png",
+    "reward_min": 0.1340363323688507,
+    "reward_max": 0.7601994872093201,
+    "reward_mean": 0.4547256529331207
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000032.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000032_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000032_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000032_rewards_progress_success.png",
+    "reward_min": 0.18527495861053467,
+    "reward_max": 0.7226870059967041,
+    "reward_mean": 0.512337863445282
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000033.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000033_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000033_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000033_rewards_progress_success.png",
+    "reward_min": 0.2934284210205078,
+    "reward_max": 0.7254830598831177,
+    "reward_mean": 0.5476967692375183
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/observation.images.head/episode_000034.mp4",
+    "task": "Left arm picks a cube and places it in the box",
+    "num_frames": 6,
+    "frames_shape": [
+      6,
+      126,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000034_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000034_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/Left_arm_picks_a_cube_places_in_box/head/output/episode_000034_rewards_progress_success.png",
+    "reward_min": 0.1356564313173294,
+    "reward_max": 0.579993486404419,
+    "reward_mean": 0.4008924067020416
+  }
+]

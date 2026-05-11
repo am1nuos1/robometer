@@ -1,0 +1,27 @@
+{
+  "python_executable": ".venv/bin/python",
+  "script_path": "scripts/batch_inference_local.py",
+  "model_path": "robometer/Robometer-4B",
+  "input_dir": "my_dataset/test1/input",
+  "task_file": "my_dataset/test1/task_description.txt",
+  "pattern": "*.mp4",
+  "output_root": "debug_tools/inference_sweep/runs",
+  "success_threshold": 0.5,
+  "debug_memory": true,
+  "timeout_seconds": null,
+  "continue_on_error": true,
+  "range_count": 1,
+  "expected_success": {
+    "ep_000": true,
+    "ep_001": false,
+    "ep_002": true,
+    "ep_003": false
+  },
+  "quantization_config_path": "/home/czhang30/.cache/huggingface/hub/models--robometer--Robometer-4B/snapshots/beef63bc914c5c189329d49c6d712d96d632aa34/config.yaml",
+  "sweep": {
+  "quantization": [true, false],
+  "max_frames": {"start": 8, "step": 5, "count": 2},
+  "resize_max_side": {"start": 112, "step": 56, "count": 7},
+  "fps": {"start": 0.5, "step": 0.25, "count": 7}
+  }
+}

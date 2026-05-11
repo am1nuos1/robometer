@@ -1,0 +1,70 @@
+[
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_000.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 7,
+    "frames_shape": [
+      7,
+      112,
+      112,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_000_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_000_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_000_rewards_progress_success.png",
+    "reward_min": 0.1378680318593979,
+    "reward_max": 0.49748384952545166,
+    "reward_mean": 0.31883829832077026
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_001.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 10,
+    "frames_shape": [
+      10,
+      112,
+      112,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_001_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_001_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_001_rewards_progress_success.png",
+    "reward_min": 0.13409920036792755,
+    "reward_max": 0.6418775320053101,
+    "reward_mean": 0.398182213306427
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_002.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 5,
+    "frames_shape": [
+      5,
+      112,
+      112,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_002_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_002_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_002_rewards_progress_success.png",
+    "reward_min": 0.13096049427986145,
+    "reward_max": 0.5333864092826843,
+    "reward_mean": 0.3205246329307556
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_003.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 10,
+    "frames_shape": [
+      10,
+      112,
+      112,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_003_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_003_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize112_fps1p5/ep_003_rewards_progress_success.png",
+    "reward_min": 0.1258556991815567,
+    "reward_max": 0.4631158709526062,
+    "reward_mean": 0.3084177076816559
+  }
+]

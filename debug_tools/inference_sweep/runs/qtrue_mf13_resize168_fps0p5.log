@@ -1,0 +1,765 @@
+2026-05-11 04:12:38.722983: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-05-11 04:12:38.800809: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1778497958.829191  134579 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1778497958.838182  134579 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1778497958.897282  134579 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778497958.897305  134579 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778497958.897308  134579 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1778497958.897310  134579 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-05-11 04:12:38.906270: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/home/czhang30/robometer/.venv/lib/python3.10/site-packages/google/api_core/_python_version_support.py:275: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.8.0+cu128).
+/home/czhang30/robometer/robometer/utils/setup_utils.py:7: UserWarning: WARNING: Unsloth should be imported before [transformers, peft] to ensure all optimizations are applied. Your code may run slower or encounter memory issues without these optimizations.
+
+Please restructure your imports with 'import unsloth' at the top of your file.
+  from unsloth import FastVisionModel
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.evals.eval_server[0m:[36m<module>[0m:[36m62[0m | [1mrobometer.eval_server logger initialized at level DEBUG[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mfind_best_model_tag[0m:[36m351[0m | [1mNo tags found in repository robometer/Robometer-4B[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mparse_hf_model_id_and_revision[0m:[36m318[0m | [1mNo best tag found, loading latest revision of robometer/Robometer-4B[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mresolve_checkpoint_path[0m:[36m269[0m | [1mDownloading checkpoint from HuggingFace Hub: robometer/Robometer-4B@latest[0m
+🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
+🦥 Unsloth Zoo will now patch everything to make training faster!
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 220752.84it/s]
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mresolve_checkpoint_path[0m:[36m276[0m | [1mDownloaded checkpoint to: /home/czhang30/.cache/huggingface/hub/models--robometer--Robometer-4B/snapshots/beef63bc914c5c189329d49c6d712d96d632aa34[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m837[0m | [1mUsing torch dtype: torch.bfloat16[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m843[0m | [1mUnsloth mode enabled for faster training[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m860[0m | [1mFlash Attention 2 CUDA is not available[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mresolve_checkpoint_path[0m:[36m261[0m | [1mUsing local checkpoint: /home/czhang30/.cache/huggingface/hub/models--robometer--Robometer-4B/snapshots/beef63bc914c5c189329d49c6d712d96d632aa34[0m
+[32m2026-05-11 04:12:47[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_load_base_model_with_unsloth[0m:[36m499[0m | [1mUsing Unsloth for faster training with Qwen model[0m
+Unsloth: You selected full finetuning support, but 4bit / 8bit is enabled - disabling LoRA / QLoRA.
+Unsloth: WARNING `trust_remote_code` is True.
+Are you certain you want to do remote code execution?
+==((====))==  Unsloth 2026.5.2: Fast Qwen3_Vl patching. Transformers: 4.57.6.
+   \\   /|    NVIDIA GeForce RTX 5070 Ti. Num GPUs = 1. Max memory: 15.449 GB. Platform: Linux.
+O^O/ \_/ \    Torch: 2.8.0+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.4.0
+\        /    Bfloat16 = TRUE. FA [Xformers = None. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Unsloth: Qwen3_Vl does not support SDPA - switching to fast eager.
+Unsloth: Using bfloat16 full finetuning which cuts memory usage by 50%.
+To enable float32 training, use `float32_mixed_precision = True` during FastLanguageModel.from_pretrained
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 16.37it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 16.35it/s]
+[32m2026-05-11 04:12:58[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_setup_processor_and_tokenizer[0m:[36m636[0m | [1mQwen Processor: Qwen3VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "disable_grouping": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "input_data_format": null,
+  "max_pixels": null,
+  "merge_size": 2,
+  "min_pixels": null,
+  "pad_size": null,
+  "patch_size": 16,
+  "processor_class": "Qwen3VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 16777216,
+    "shortest_edge": 65536
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='Qwen/Qwen3-VL-4B-Instruct', vocab_size=151643, model_max_length=262144, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151657: AddedToken("<tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151658: AddedToken("</tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151659: AddedToken("<|fim_prefix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151660: AddedToken("<|fim_middle|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151661: AddedToken("<|fim_suffix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151662: AddedToken("<|fim_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151663: AddedToken("<|repo_name|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151664: AddedToken("<|file_sep|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151665: AddedToken("<tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151666: AddedToken("</tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151667: AddedToken("<think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151668: AddedToken("</think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+}
+)
+- video_processor: Qwen3VLVideoProcessor {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": false,
+  "fps": 2,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "input_data_format": null,
+  "max_frames": 768,
+  "merge_size": 2,
+  "min_frames": 4,
+  "num_frames": null,
+  "pad_size": null,
+  "patch_size": 16,
+  "processor_class": "Qwen3VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 25165824,
+    "shortest_edge": 4096
+  },
+  "temporal_patch_size": 2,
+  "video_metadata": null,
+  "video_processor_type": "Qwen3VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen3VLProcessor"
+}
+[0m
+[32m2026-05-11 04:12:58[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_add_special_tokens_and_resize[0m:[36m663[0m | [1mBefore adding special tokens: 151669[0m
+[32m2026-05-11 04:12:58[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_add_special_tokens_and_resize[0m:[36m670[0m | [1mAdded 5 special tokens[0m
+[32m2026-05-11 04:13:04[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_add_special_tokens_and_resize[0m:[36m673[0m | [1mResized token embeddings to 151674[0m
+[32m2026-05-11 04:13:04[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m976[0m | [1mInitializing RBM model...[0m
+RBM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+[32m2026-05-11 04:13:04[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.models.heads[0m:[36m__init__[0m:[36m71[0m | [1mPredictionHeadsMixin. __init__: use_discrete_progress: True[0m
+[32m2026-05-11 04:13:04[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.save[0m:[36mparse_hf_model_id_and_revision[0m:[36m320[0m | [1mLoading local/explicit model from /home/czhang30/.cache/huggingface/hub/models--robometer--Robometer-4B/snapshots/beef63bc914c5c189329d49c6d712d96d632aa34[0m
+You are using a model of type qwen3_vl to instantiate a model of type qwen2_5_vl. This is not supported for all configurations of models and can yield errors.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_interleaved'}
+RBM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+[32m2026-05-11 04:13:07[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.models.heads[0m:[36m__init__[0m:[36m71[0m | [1mPredictionHeadsMixin. __init__: use_discrete_progress: True[0m
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 23.42it/s]
+RBM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+RBM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+[32m2026-05-11 04:13:07[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_verify_checkpoint_loading[0m:[36m791[0m | [1mBefore visual: torch.Size([4096, 1024]), -65.5 | After visual: torch.Size([4096, 1024]), -65.5[0m
+[32m2026-05-11 04:13:07[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_verify_checkpoint_loading[0m:[36m794[0m | [1mBefore progress head: torch.Size([1280, 2560]), -0.7421875 | After progress head: torch.Size([1280, 2560]), 37.25[0m
+[32m2026-05-11 04:13:07[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_verify_checkpoint_loading[0m:[36m797[0m | [1mBefore LM embed tokens: torch.Size([151674, 2560]), -8128.0 | After LM embed tokens: torch.Size([151674, 2560]), -8128.0[0m
+[32m2026-05-11 04:13:07[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_verify_checkpoint_loading[0m:[36m800[0m | [1mBefore LM layer: torch.Size([9728, 2560]), -71.0 | After LM layer: torch.Size([9728, 2560]), -72.5[0m
+[32m2026-05-11 04:13:07[0m | [33m[1mWARNING [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36m_verify_checkpoint_loading[0m:[36m806[0m | [33m[1mBefore and after visual are the same! Check if you loaded the pretrained model correctly[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1148[0m | [1mModel architecture initialized[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1149[0m | [1mModel architecture: RBM(
+  (progress_head): Sequential(
+    (0): Linear(in_features=2560, out_features=1280, bias=True)
+    (1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.1, inplace=False)
+    (4): Linear(in_features=1280, out_features=10, bias=True)
+  )
+  (preference_head): Sequential(
+    (0): Linear(in_features=2560, out_features=1280, bias=True)
+    (1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.1, inplace=False)
+    (4): Linear(in_features=1280, out_features=1, bias=True)
+  )
+  (success_head): Sequential(
+    (0): Linear(in_features=2560, out_features=1280, bias=True)
+    (1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.1, inplace=False)
+    (4): Linear(in_features=1280, out_features=1, bias=True)
+  )
+  (model): Qwen3VLModel(
+    (visual): Qwen3VLVisionModel(
+      (patch_embed): Qwen3VLVisionPatchEmbed(
+        (proj): Conv3d(3, 1024, kernel_size=(2, 16, 16), stride=(2, 16, 16))
+      )
+      (pos_embed): Embedding(2304, 1024)
+      (rotary_pos_emb): Qwen3VLVisionRotaryEmbedding()
+      (blocks): ModuleList(
+        (0-23): 24 x Qwen3VLVisionBlock(
+          (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+          (attn): Qwen3VLVisionAttention(
+            (qkv): Linear(in_features=1024, out_features=3072, bias=True)
+            (proj): Linear(in_features=1024, out_features=1024, bias=True)
+          )
+          (mlp): Qwen3VLVisionMLP(
+            (linear_fc1): Linear(in_features=1024, out_features=4096, bias=True)
+            (linear_fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            (act_fn): GELUTanh()
+          )
+        )
+      )
+      (merger): Qwen3VLVisionPatchMerger(
+        (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+        (linear_fc1): Linear(in_features=4096, out_features=4096, bias=True)
+        (act_fn): GELU(approximate='none')
+        (linear_fc2): Linear(in_features=4096, out_features=2560, bias=True)
+      )
+      (deepstack_merger_list): ModuleList(
+        (0-2): 3 x Qwen3VLVisionPatchMerger(
+          (norm): LayerNorm((4096,), eps=1e-06, elementwise_affine=True)
+          (linear_fc1): Linear(in_features=4096, out_features=4096, bias=True)
+          (act_fn): GELU(approximate='none')
+          (linear_fc2): Linear(in_features=4096, out_features=2560, bias=True)
+        )
+      )
+    )
+    (language_model): Qwen3VLTextModel(
+      (embed_tokens): Embedding(151674, 2560)
+      (layers): ModuleList(
+        (0-35): 36 x Qwen3VLTextDecoderLayer(
+          (self_attn): Qwen3VLTextAttention(
+            (q_proj): Linear(in_features=2560, out_features=4096, bias=False)
+            (k_proj): Linear(in_features=2560, out_features=1024, bias=False)
+            (v_proj): Linear(in_features=2560, out_features=1024, bias=False)
+            (o_proj): Linear(in_features=4096, out_features=2560, bias=False)
+            (q_norm): Qwen3VLTextRMSNorm((128,), eps=1e-06)
+            (k_norm): Qwen3VLTextRMSNorm((128,), eps=1e-06)
+          )
+          (mlp): Qwen3VLTextMLP(
+            (gate_proj): Linear(in_features=2560, out_features=9728, bias=False)
+            (up_proj): Linear(in_features=2560, out_features=9728, bias=False)
+            (down_proj): Linear(in_features=9728, out_features=2560, bias=False)
+            (act_fn): SiLUActivation()
+          )
+          (input_layernorm): Qwen3VLTextRMSNorm((2560,), eps=1e-06)
+          (post_attention_layernorm): Qwen3VLTextRMSNorm((2560,), eps=1e-06)
+        )
+      )
+      (norm): Qwen3VLTextRMSNorm((2560,), eps=1e-06)
+      (rotary_emb): Qwen3VLTextRotaryEmbedding()
+    )
+  )
+  (frame_pool_attn): Linear(in_features=2560, out_features=1, bias=False)
+)[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1204[0m | [1mTraining configuration:[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1205[0m | [1m  - Vision encoder: False[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1206[0m | [1m  - Language model: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1207[0m | [1m  - Progress head: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1208[0m | [1m  - Success head: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1209[0m | [1m  - Preference head: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.0.weight                                       | torch.Size([1280, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.0.bias                                         | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.1.weight                                       | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.1.bias                                         | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.4.weight                                       | torch.Size([10, 1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mprogress_head.4.bias                                         | torch.Size([10]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.0.weight                                     | torch.Size([1280, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.0.bias                                       | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.1.weight                                     | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.1.bias                                       | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.4.weight                                     | torch.Size([1, 1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mpreference_head.4.bias                                       | torch.Size([1]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.0.weight                                        | torch.Size([1280, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.0.bias                                          | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.1.weight                                        | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.1.bias                                          | torch.Size([1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.4.weight                                        | torch.Size([1, 1280]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1msuccess_head.4.bias                                          | torch.Size([1]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.embed_tokens.weight                     | torch.Size([151674, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.0.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.1.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.2.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.3.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.4.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.5.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.6.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.7.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.8.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.q_proj.weight        | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.k_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.v_proj.weight        | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.o_proj.weight        | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.q_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.self_attn.k_norm.weight        | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.mlp.gate_proj.weight           | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.mlp.up_proj.weight             | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.mlp.down_proj.weight           | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.input_layernorm.weight         | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.9.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.10.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.11.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.12.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.13.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.14.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.15.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.16.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.17.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.18.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.19.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.20.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.21.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.22.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.23.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.24.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.25.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.26.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.27.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.28.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.29.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.30.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.31.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.32.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.33.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.34.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.q_proj.weight       | torch.Size([4096, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.k_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.v_proj.weight       | torch.Size([1024, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.o_proj.weight       | torch.Size([2560, 4096]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.q_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.self_attn.k_norm.weight       | torch.Size([128]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.mlp.gate_proj.weight          | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.mlp.up_proj.weight            | torch.Size([9728, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.mlp.down_proj.weight          | torch.Size([2560, 9728]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.input_layernorm.weight        | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.layers.35.post_attention_layernorm.weight | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mmodel.language_model.norm.weight                             | torch.Size([2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1215[0m | [1mframe_pool_attn.weight                                       | torch.Size([1, 2560]) | RG: True[0m
+[32m2026-05-11 04:13:08[0m | [1mINFO    [0m | [Rank 0] [36mrobometer.utils.setup_utils[0m:[36msetup_model_and_processor[0m:[36m1219[0m | [1mtrainable params: 4,031,657,228 || all params: 4,447,004,940 || trainable%: 90.6601[0m
+[32m2026-05-11 04:13:12[0m | [34m[1mDEBUG   [0m | [Rank 0] [36mrobometer.evals.eval_server[0m:[36mcompute_batch_outputs[0m:[36m541[0m | [34m[1mcompute_batch_outputs sample_type=progress[0m
+[32m2026-05-11 04:13:14[0m | [34m[1mDEBUG   [0m | [Rank 0] [36mrobometer.evals.eval_server[0m:[36mcompute_batch_outputs[0m:[36m541[0m | [34m[1mcompute_batch_outputs sample_type=progress[0m
+[32m2026-05-11 04:13:14[0m | [34m[1mDEBUG   [0m | [Rank 0] [36mrobometer.evals.eval_server[0m:[36mcompute_batch_outputs[0m:[36m541[0m | [34m[1mcompute_batch_outputs sample_type=progress[0m
+[32m2026-05-11 04:13:14[0m | [34m[1mDEBUG   [0m | [Rank 0] [36mrobometer.evals.eval_server[0m:[36mcompute_batch_outputs[0m:[36m541[0m | [34m[1mcompute_batch_outputs sample_type=progress[0m
+[cuda] after model load: allocated=8.34GiB reserved=8.38GiB peak=8.34GiB
+Loaded frames for ep_000.mp4: shape=(2, 168, 168, 3), dtype=uint8
+[batch] input_ids: shape=(1, 150) dtype=torch.int64 device=cpu
+[batch] attention_mask: shape=(1, 150) dtype=torch.int64 device=cpu
+[batch] pixel_values: shape=(200, 1536) dtype=torch.float32 device=cpu
+[batch] image_grid_thw: shape=(2, 3) dtype=torch.int64 device=cpu
+[batch] resample_attempts: list len=1
+[batch] input_ids: shape=(1, 150) dtype=torch.int64 device=cuda:0
+[batch] attention_mask: shape=(1, 150) dtype=torch.int64 device=cuda:0
+[batch] pixel_values: shape=(200, 1536) dtype=torch.float32 device=cuda:0
+[batch] image_grid_thw: shape=(2, 3) dtype=torch.int64 device=cuda:0
+[batch] resample_attempts: list len=1
+[cuda] before forward: allocated=8.34GiB reserved=8.38GiB peak=8.34GiB
+[cuda] after forward: allocated=8.35GiB reserved=8.45GiB peak=8.41GiB
+Loaded frames for ep_001.mp4: shape=(3, 168, 168, 3), dtype=uint8
+[batch] input_ids: shape=(1, 183) dtype=torch.int64 device=cpu
+[batch] attention_mask: shape=(1, 183) dtype=torch.int64 device=cpu
+[batch] pixel_values: shape=(300, 1536) dtype=torch.float32 device=cpu
+[batch] image_grid_thw: shape=(3, 3) dtype=torch.int64 device=cpu
+[batch] resample_attempts: list len=1
+[batch] input_ids: shape=(1, 183) dtype=torch.int64 device=cuda:0
+[batch] attention_mask: shape=(1, 183) dtype=torch.int64 device=cuda:0
+[batch] pixel_values: shape=(300, 1536) dtype=torch.float32 device=cuda:0
+[batch] image_grid_thw: shape=(3, 3) dtype=torch.int64 device=cuda:0
+[batch] resample_attempts: list len=1
+[cuda] before forward: allocated=8.35GiB reserved=8.45GiB peak=8.41GiB
+[cuda] after forward: allocated=8.35GiB reserved=8.47GiB peak=8.43GiB
+Loaded frames for ep_002.mp4: shape=(2, 168, 168, 3), dtype=uint8
+[batch] input_ids: shape=(1, 150) dtype=torch.int64 device=cpu
+[batch] attention_mask: shape=(1, 150) dtype=torch.int64 device=cpu
+[batch] pixel_values: shape=(200, 1536) dtype=torch.float32 device=cpu
+[batch] image_grid_thw: shape=(2, 3) dtype=torch.int64 device=cpu
+[batch] resample_attempts: list len=1
+[batch] input_ids: shape=(1, 150) dtype=torch.int64 device=cuda:0
+[batch] attention_mask: shape=(1, 150) dtype=torch.int64 device=cuda:0
+[batch] pixel_values: shape=(200, 1536) dtype=torch.float32 device=cuda:0
+[batch] image_grid_thw: shape=(2, 3) dtype=torch.int64 device=cuda:0
+[batch] resample_attempts: list len=1
+[cuda] before forward: allocated=8.35GiB reserved=8.47GiB peak=8.43GiB
+[cuda] after forward: allocated=8.35GiB reserved=8.47GiB peak=8.43GiB
+Loaded frames for ep_003.mp4: shape=(3, 168, 168, 3), dtype=uint8
+[batch] input_ids: shape=(1, 183) dtype=torch.int64 device=cpu
+[batch] attention_mask: shape=(1, 183) dtype=torch.int64 device=cpu
+[batch] pixel_values: shape=(300, 1536) dtype=torch.float32 device=cpu
+[batch] image_grid_thw: shape=(3, 3) dtype=torch.int64 device=cpu
+[batch] resample_attempts: list len=1
+[batch] input_ids: shape=(1, 183) dtype=torch.int64 device=cuda:0
+[batch] attention_mask: shape=(1, 183) dtype=torch.int64 device=cuda:0
+[batch] pixel_values: shape=(300, 1536) dtype=torch.float32 device=cuda:0
+[batch] image_grid_thw: shape=(3, 3) dtype=torch.int64 device=cuda:0
+[batch] resample_attempts: list len=1
+[cuda] before forward: allocated=8.35GiB reserved=8.47GiB peak=8.43GiB
+[cuda] after forward: allocated=8.35GiB reserved=8.47GiB peak=8.43GiB
+{
+  "processed_videos": 4,
+  "summary_file": "/home/czhang30/robometer/debug_tools/inference_sweep/runs/qtrue_mf13_resize168_fps0p5/batch_summary.json"
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_000.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 14,
+    "frames_shape": [
+      14,
+      224,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/test1/output/ep_000_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/test1/output/ep_000_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/test1/output/ep_000_rewards_progress_success.png",
+    "reward_min": 0.07881082594394684,
+    "reward_max": 0.8128828406333923,
+    "reward_mean": 0.39763060212135315
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_001.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 20,
+    "frames_shape": [
+      20,
+      224,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/test1/output/ep_001_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/test1/output/ep_001_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/test1/output/ep_001_rewards_progress_success.png",
+    "reward_min": 0.0767812728881836,
+    "reward_max": 0.8482793569564819,
+    "reward_mean": 0.5958648920059204
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_002.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 10,
+    "frames_shape": [
+      10,
+      224,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/test1/output/ep_002_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/test1/output/ep_002_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/test1/output/ep_002_rewards_progress_success.png",
+    "reward_min": 0.07976222783327103,
+    "reward_max": 0.7923624515533447,
+    "reward_mean": 0.4366963505744934
+  },
+  {
+    "video": "/home/czhang30/robometer/my_dataset/test1/input/ep_003.mp4",
+    "task": "put the shrimp in white drawer",
+    "num_frames": 20,
+    "frames_shape": [
+      20,
+      224,
+      224,
+      3
+    ],
+    "out_rewards": "/home/czhang30/robometer/my_dataset/test1/output/ep_003_rewards.npy",
+    "out_success_probs": "/home/czhang30/robometer/my_dataset/test1/output/ep_003_rewards_success_probs.npy",
+    "out_plot": "/home/czhang30/robometer/my_dataset/test1/output/ep_003_rewards_progress_success.png",
+    "reward_min": 0.08247202634811401,
+    "reward_max": 0.6450904607772827,
+    "reward_mean": 0.4311724603176117
+  }
+]
